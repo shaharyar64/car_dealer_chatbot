@@ -1,0 +1,23 @@
+[theme]
+base = "light"
+primaryColor = "#2557d6"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f8fafc"
+textColor = "#0f172a"
+borderColor = "#e2e8f0"
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap, sans-serif"
+baseFontSize = 15
+baseRadius = "medium"
+buttonRadius = "medium"
+showWidgetBorder = true
+
+[theme.sidebar]
+backgroundColor = "#f8fafc"
+secondaryBackgroundColor = "#ffffff"
+
+[client]
+# Hide the developer "Deploy" button and menu entries for a cleaner app.
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false

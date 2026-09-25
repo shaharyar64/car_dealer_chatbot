@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "car-dealer-chatbot"
+version = "0.1.0"
+description = "An LLM-powered chatbot that helps users find cars and connect with dealers"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "Shaharyar Tariq", email = "shaharyartariq9@gmail.com"}
+]
+license = {text = "MIT"}
+
+dependencies = [
+    "langchain-core==1.6.5",
+    "langchain-openai==1.6.6",
+    "python-dotenv==1.2.3",
+    "streamlit==1.64.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.1.1",
+    "pytest-cov==7.1.0",
+    "black==26.5.1",
+    "ruff==0.16.9",
+]
+
+[project.scripts]
+car-dealer-chatbot = "car_dealer_chatbot.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/car_dealer_chatbot"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]  # line length is enforced by black; long prompt strings are intentional
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-v --tb=short"
