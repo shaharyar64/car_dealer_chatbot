@@ -1,0 +1,23 @@
+dealer_id,name,city,phone,email
+D001,Utrecht Auto Centre,Utrecht,+31 30 123 4567,contact@utrechtauto.nl
+D002,Amsterdam Motors,Amsterdam,+31 20 234 5678,info@amsterdammotors.nl
+D003,Rotterdam Car Hub,Rotterdam,+31 10 345 6789,sales@rotcarhub.nl
+D004,The Hague Autos,The Hague,+31 70 456 7890,service@thehagueautos.nl
+D005,Berlin Auto Garage,Berlin,+49 30 567 8901,kontakt@berlinauto.de
+D006,Munich Motors,Munich,+49 89 678 9012,info@munichmotors.de
+D007,Paris Auto Luxe,Paris,+33 1 789 0123,contact@parisluxe.fr
+D008,Lyon Vehicle Sales,Lyon,+33 4 890 1234,ventes@lyonvehicles.fr
+D009,Madrid Classic Cars,Madrid,+34 91 901 2345,clientes@madridclassic.es
+D010,Barcelona Auto Group,Barcelona,+34 93 012 3456,info@barcelonauto.es
+D011,Brussels Auto Plaza,Brussels,+32 2 123 4567,info@brusselsautoplaza.be
+D012,Antwerp Motor Company,Antwerp,+32 3 234 5678,sales@antwerpmotor.be
+D013,Vienna Car Center,Vienna,+43 1 345 6789,office@viennacarcenter.at
+D014,Zurich Premium Cars,Zurich,+41 44 456 7890,info@zurichpremium.ch
+D015,Milano Auto Italia,Milan,+39 02 567 8901,vendite@milanoauto.it
+D016,Roma Motori,Rome,+39 06 678 9012,info@romamotori.it
+D017,Lisbon Car Store,Lisbon,+351 21 789 0123,geral@lisboncarstore.pt
+D018,Copenhagen Auto House,Copenhagen,+45 33 89 01 23,salg@cphautohouse.dk
+D019,Stockholm Bil Center,Stockholm,+46 8 901 2345,info@stockholmbil.se
+D020,Dublin Motor Hub,Dublin,+353 1 012 3456,hello@dublinmotorhub.ie
+D021,Hamburg Autohaus Nord,Hamburg,+49 40 123 4567,verkauf@autohausnord.de
+D022,Warsaw Car Point,Warsaw,+48 22 234 5678,biuro@warsawcarpoint.pl

@@ -1,0 +1,79 @@
+car_id,make,model,variant,year,price,body_type,dealer_id
+C001,Toyota,Corolla,1.8 Hybrid Dynamic,2023,28500,Hatchback,D001
+C002,Toyota,Corolla,1.6 Petrol GL,2023,24900,Hatchback,D001
+C003,Volkswagen,Golf,1.5 TSI Comfortline,2023,35200,Hatchback,D002
+C004,Volkswagen,Golf,2.0 TDI R-Line,2023,42100,Hatchback,D002
+C005,BMW,3 Series,320i M Sport,2023,52000,Sedan,D003
+C006,BMW,3 Series,330i xDrive,2023,65000,Sedan,D003
+C007,Ford,Focus,1.0 EcoBoost ST-Line,2022,26400,Hatchback,D004
+C008,Ford,Mustang,5.0 V8 GT,2023,85000,Coupe,D004
+C009,Hyundai,i30,1.4 MPI Classic,2023,20500,Hatchback,D005
+C010,Hyundai,Tucson,1.6 T-GDi Premium,2023,38900,SUV,D005
+C011,Mercedes-Benz,C-Class,C200 Sedan,2023,48000,Sedan,D006
+C012,Mercedes-Benz,E-Class,E350 Executive,2023,72000,Sedan,D006
+C013,Audi,A4,2.0 TFSI Quattro,2023,55000,Sedan,D007
+C014,Audi,Q5,3.0 TFSI Premium Plus,2023,68000,SUV,D007
+C015,Peugeot,308,1.2 PureTech Active,2023,27500,Hatchback,D008
+C016,Peugeot,5008,1.5 BlueHDi Allure,2023,44000,SUV,D008
+C017,Seat,Leon,1.5 TSI FR,2023,32000,Hatchback,D009
+C018,Seat,Tarraco,2.0 TDI Xcellence,2023,51000,SUV,D009
+C019,Skoda,Octavia,1.5 TSI iV Plug-In Hybrid,2023,41000,Hatchback,D010
+C020,Skoda,Superb,2.0 TDI Laurin Klement,2023,58000,Sedan,D010
+C021,Fiat,500,1.2 Hybrid Lounge,2023,22000,Hatchback,D001
+C022,Renault,Megane,1.3 TCe Iconic,2023,29500,Hatchback,D002
+C023,Citroën,C5,1.5 BlueHDi Feel,2023,36000,Sedan,D003
+C024,Toyota,Yaris,1.5 Hybrid Active,2024,23900,Hatchback,D011
+C025,Toyota,RAV4,2.5 Hybrid AWD Style,2024,44500,SUV,D001
+C026,Toyota,C-HR,1.8 Hybrid Team,2022,29900,SUV,D012
+C027,Honda,Civic,2.0 eHEV Sport,2024,36500,Hatchback,D013
+C028,Honda,Jazz,1.5 eHEV Crosstar,2023,27900,Hatchback,D013
+C029,Honda,CR-V,2.0 eHEV Advance,2024,47900,SUV,D014
+C030,Kia,Sportage,1.6 T-GDi GT-Line,2024,39900,SUV,D015
+C031,Kia,Niro,64 kWh EV Inspire,2023,44900,SUV,D015
+C032,Kia,Picanto,1.0 DPi GT-Line,2024,16500,Hatchback,D016
+C033,Nissan,Qashqai,1.3 DIG-T N-Connecta,2023,34900,SUV,D017
+C034,Nissan,Juke,1.0 DIG-T Tekna,2022,24900,SUV,D017
+C035,Nissan,Leaf,39 kWh Acenta,2023,32900,Hatchback,D018
+C036,Mazda,CX-5,2.5 Skyactiv-G Takumi,2024,42900,SUV,D018
+C037,Mazda,MX-5,2.0 Skyactiv-G Homura,2023,36900,Convertible,D019
+C038,Mazda,3,2.0 e-Skyactiv-X Exclusive,2023,31900,Hatchback,D019
+C039,Volvo,XC60,B5 AWD Plus Dark,2024,58900,SUV,D019
+C040,Volvo,XC40,B3 Core,2023,41900,SUV,D018
+C041,Volvo,V60,T6 Recharge Plus,2022,49900,Estate,D019
+C042,Porsche,911,Carrera S,2023,145000,Coupe,D014
+C043,Porsche,Macan,2.0 T,2024,78900,SUV,D014
+C044,Porsche,Taycan,4S Performance,2023,112000,Sedan,D014
+C045,Opel,Corsa,1.2 Turbo GS,2023,21900,Hatchback,D021
+C046,Opel,Astra,1.2 Turbo Elegance,2024,28900,Hatchback,D021
+C047,Opel,Mokka,1.2 Turbo GS,2023,27500,SUV,D022
+C048,Dacia,Sandero,1.0 TCe Stepway Expression,2024,17900,Hatchback,D022
+C049,Dacia,Duster,1.3 TCe Journey,2024,23900,SUV,D012
+C050,Suzuki,Swift,1.2 Hybrid Select,2024,19900,Hatchback,D016
+C051,Suzuki,Vitara,1.4 Boosterjet AllGrip,2023,29500,SUV,D016
+C052,Land Rover,Range Rover Evoque,P250 R-Dynamic SE,2023,61900,SUV,D020
+C053,Land Rover,Defender,110 D300 X-Dynamic SE,2024,89900,SUV,D020
+C054,Jaguar,F-Pace,P250 R-Dynamic S,2023,64900,SUV,D020
+C055,Mini,Cooper,S 3-Door Classic,2024,32900,Hatchback,D021
+C056,Alfa Romeo,Giulia,2.0 Veloce Q4,2023,54900,Sedan,D015
+C057,Fiat,Tipo,1.0 Cross,2022,18900,Hatchback,D016
+C058,BMW,X5,xDrive40i M Sport,2024,89900,SUV,D006
+C059,BMW,1 Series,118i Sport Line,2023,34500,Hatchback,D005
+C060,Mercedes-Benz,A-Class,A200 AMG Line,2023,36900,Hatchback,D006
+C061,Mercedes-Benz,GLC,300 4MATIC,2024,67900,SUV,D013
+C062,Audi,A3,Sportback 35 TFSI S Line,2023,38900,Hatchback,D007
+C063,Audi,Q3,35 TFSI Advanced,2024,44900,SUV,D011
+C064,Volkswagen,Polo,1.0 TSI Life,2024,22900,Hatchback,D002
+C065,Volkswagen,Tiguan,1.5 eTSI Elegance,2024,45900,SUV,D012
+C066,Volkswagen,ID.4,Pro Performance,2023,47900,SUV,D018
+C067,Hyundai,Kona,1.6 T-GDi Hybrid Premium,2024,34900,SUV,D017
+C068,Ford,Puma,1.0 EcoBoost Hybrid Titanium,2023,27900,SUV,D004
+C069,Ford,Kuga,2.5 PHEV ST-Line X,2024,42900,SUV,D021
+C070,Renault,Clio,1.0 TCe Evolution,2024,19900,Hatchback,D008
+C071,Renault,Captur,1.3 TCe Techno,2023,27400,SUV,D011
+C072,Peugeot,208,1.2 PureTech Allure,2024,23500,Hatchback,D008
+C073,Citroën,C3,1.2 PureTech Shine,2023,19500,Hatchback,D003
+C074,Skoda,Fabia,1.0 TSI Style,2024,21900,Hatchback,D010
+C075,Skoda,Kodiaq,2.0 TDI Sportline 4x4,2024,52900,SUV,D022
+C076,Seat,Ibiza,1.0 TSI FR,2021,15900,Hatchback,D009
+C077,Toyota,Corolla,2.0 Hybrid GR Sport,2024,34900,Hatchback,D012
+C078,Volkswagen,Golf,1.5 eTSI Life,2024,33900,Hatchback,D013
