@@ -25,11 +25,10 @@ from difflib import SequenceMatcher
 from itertools import zip_longest
 from typing import Any, Callable, Optional
 
-from .intents import Intent
-from .llm import LLMClient, LLMError
-from .logging_config import LOGGER_NAME
-from .models import Car, Dealer
-from .repository import find_dealer, list_makes, search_cars
+from ..config import LOGGER_NAME
+from ..data import find_dealer, list_makes, search_cars
+from ..llm import LLMClient, LLMError
+from ..models import Car, Dealer, Intent
 
 logger = logging.getLogger(LOGGER_NAME)
 

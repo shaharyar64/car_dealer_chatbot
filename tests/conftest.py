@@ -8,10 +8,9 @@ from typing import Optional
 import pytest
 
 from car_dealer_chatbot.config import load_env
-from car_dealer_chatbot.intents import Intent
+from car_dealer_chatbot.data import load_cars, load_dealers
 from car_dealer_chatbot.llm.base import LLMClient, LLMError
-from car_dealer_chatbot.models import Car, Dealer
-from car_dealer_chatbot.repository import load_cars, load_dealers
+from car_dealer_chatbot.models import Car, Dealer, Intent
 from car_dealer_chatbot.storage import ConversationStore
 
 load_env()

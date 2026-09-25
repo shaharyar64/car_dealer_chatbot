@@ -2,7 +2,7 @@
 
 import pytest
 
-from car_dealer_chatbot.chatbot import Chatbot
+from car_dealer_chatbot.core import Chatbot
 from car_dealer_chatbot.models import Car, Dealer
 from car_dealer_chatbot.services.titles import DEFAULT_TITLE, generate_title, title_from_text
 

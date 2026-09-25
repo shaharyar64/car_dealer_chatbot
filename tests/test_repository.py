@@ -4,14 +4,14 @@ from pathlib import Path
 
 import pytest
 
-from car_dealer_chatbot.models import Car, Dealer
-from car_dealer_chatbot.repository import (
+from car_dealer_chatbot.data import (
     DataError,
     find_dealer,
     load_cars,
     load_dealers,
     search_cars,
 )
+from car_dealer_chatbot.models import Car, Dealer
 
 
 class TestLoadCars:

@@ -2,7 +2,7 @@
 
 import pytest
 
-from car_dealer_chatbot.chatbot import LLM_UNAVAILABLE_MESSAGE
+from car_dealer_chatbot.core.chatbot import LLM_UNAVAILABLE_MESSAGE
 from car_dealer_chatbot.models import Car, Dealer
 from car_dealer_chatbot.services import (
     ChatService,

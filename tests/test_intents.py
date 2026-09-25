@@ -1,6 +1,6 @@
 """Tests for turning loosely-typed LLM output into an Intent."""
 
-from car_dealer_chatbot.intents import Intent
+from car_dealer_chatbot.models import Intent
 
 
 def test_full_intent_is_parsed() -> None:

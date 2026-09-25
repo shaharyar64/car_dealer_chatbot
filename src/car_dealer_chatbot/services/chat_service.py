@@ -12,9 +12,10 @@ import threading
 from dataclasses import dataclass
 from typing import Optional
 
-from ..chatbot import OPTIONS_ACTIONS, OPTIONS_CARS, Chatbot
+from ..core import Chatbot
+from ..core.chatbot import OPTIONS_ACTIONS, OPTIONS_CARS
+from ..config import LOGGER_NAME
 from ..llm import LLMClient
-from ..logging_config import LOGGER_NAME
 from ..models import Car, Dealer
 from ..storage import Conversation, ConversationStore, Message
 from .titles import DEFAULT_TITLE, generate_title

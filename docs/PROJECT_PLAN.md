@@ -30,7 +30,7 @@ data) and offered as both a Streamlit web app and a CLI.
 ```
 Streamlit UI → Chat service → Chatbot (conversation logic) → LangChain/OpenAI (intent extraction)
                     ↓                       ↓
-          Session memory (st.session_state)  repository.py (CSV search) + scheduling.py
+          Session memory (st.session_state)  data/repository.py (CSV search) + models/scheduling.py
 ```
 
 - **Streamlit UI** (`ui/`): chat window, quick-reply buttons, history sidebar
@@ -41,10 +41,12 @@ Streamlit UI → Chat service → Chatbot (conversation logic) → LangChain/Ope
   resolves references, searches the inventory and writes the reply from a fixed template
 - **LLM layer** (`llm/`): an abstract `LLMClient` interface with an `OpenAIClient` implementation
   (LangChain's `ChatOpenAI`, forced tool-calling). Swapping providers means adding one adapter class
-- **Repository** (`repository.py`): loads the CSVs and does token-based fuzzy car search
+- **Data layer** (`data/repository.py`): loads the CSVs and does token-based fuzzy car search
   (`difflib`), tolerant of typos and partial names
-- **Scheduling** (`scheduling.py`): the LLM only extracts date/time *parts* ("Friday", "3pm");
+- **Models** (`models/`): data models (`models.py`), intent definitions (`intents.py`), and
+  scheduling logic (`scheduling.py`). The LLM only extracts date/time *parts* ("Friday", "3pm");
   Python resolves them into an actual datetime deterministically
+- **Configuration** (`config/`): environment variable handling and logging setup
 
 See [docs/ARCHITECTURE.md](ARCHITECTURE.md) for the full request-flow diagram.
 

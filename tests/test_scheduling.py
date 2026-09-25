@@ -4,7 +4,7 @@ from datetime import date, datetime, time
 
 import pytest
 
-from car_dealer_chatbot.scheduling import SlotParts, resolve_slot, slot_parts_from_dict
+from car_dealer_chatbot.models import SlotParts, resolve_slot, slot_parts_from_dict
 
 # Friday 25 September 2026, 19:20
 NOW = datetime(2026, 9, 25, 19, 20)

@@ -7,8 +7,8 @@ from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Optional
 
-from .logging_config import LOGGER_NAME
-from .models import Car, Dealer
+from ..config import LOGGER_NAME
+from ..models import Car, Dealer
 
 logger = logging.getLogger(LOGGER_NAME)
 

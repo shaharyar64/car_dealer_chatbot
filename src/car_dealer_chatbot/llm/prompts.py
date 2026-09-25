@@ -1,6 +1,6 @@
 """System prompts and tool schemas for LLM extraction tasks."""
 
-from ..intents import INTENT_NAMES, REFERENCES, RELATIVE_PRICES, SORTS
+from ..models import INTENT_NAMES, REFERENCES, RELATIVE_PRICES, SORTS
 
 INTERPRET_MESSAGE_SYSTEM = """You are the language-understanding layer of a car dealership chatbot.
 Read the customer's LATEST message in the context of the conversation below and record what they
@@ -32,9 +32,9 @@ things at once - state a request AND state a fact (or several facts) about the c
 must capture both in full: classify the intent from the request part as if the fact statement
 were not there, and list every fact from the fact statement as if the request were not there.
 Never let an unrelated personal statement (a name, a city, a preference) make the intent 'unclear'
-or blank: 'tell me the options, my name is Ayesha' is a search (refine=true) with
-facts=[{key: name, value: Ayesha}]; 'show me BMWs and my name is Ayesha' is a search with
-car_query='BMW' and facts=[{key: name, value: Ayesha}].
+or blank: 'tell me the options, my name is Shaharyar' is a search (refine=true) with
+facts=[{key: name, value: Shaharyar}]; 'show me BMWs and my name is Shaharyar' is a search with
+car_query='BMW' and facts=[{key: name, value: Shaharyar}].
 
 Intents:
 - greeting, thanks, acknowledgement ('ok', 'great', 'sounds good'), goodbye.

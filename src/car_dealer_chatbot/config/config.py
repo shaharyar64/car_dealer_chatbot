@@ -5,8 +5,8 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-# src/car_dealer_chatbot/config.py -> project root is three levels up.
-PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+# src/car_dealer_chatbot/config/config.py -> project root is four levels up.
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 
 
 def load_env() -> None:

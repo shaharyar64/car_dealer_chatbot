@@ -5,7 +5,7 @@ from typing import Optional
 
 import streamlit as st
 
-from ..logging_config import LOGGER_NAME
+from ..config import LOGGER_NAME
 from ..services import ChatService, ConversationNotFoundError, ConversationView, QuickReply
 from ..storage import ConversationStore
 from . import session, theme

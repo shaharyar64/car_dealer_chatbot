@@ -1,14 +1,13 @@
 """Streamlit web interface for the car dealer chatbot (temporary, session-based chat history).
 
-Run with: streamlit run src/car_dealer_chatbot/webapp.py
+Run with: streamlit run src/car_dealer_chatbot/ui/webapp.py
 """
 
 # Absolute imports: `streamlit run` executes this file as a script, not as a package module.
 import streamlit as st
 
-from car_dealer_chatbot.config import load_env
-from car_dealer_chatbot.logging_config import setup_logging
-from car_dealer_chatbot.repository import DataError
+from car_dealer_chatbot.config import load_env, setup_logging
+from car_dealer_chatbot.data import DataError
 from car_dealer_chatbot.services.factory import AppServices, build_services
 from car_dealer_chatbot.ui import session, theme
 from car_dealer_chatbot.ui.chat_page import render_chat_page

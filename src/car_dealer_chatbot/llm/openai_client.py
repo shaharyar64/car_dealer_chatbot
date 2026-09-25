@@ -8,9 +8,8 @@ from typing import Any, Optional
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
 
-from ..intents import Intent
-from ..logging_config import LOGGER_NAME
-from ..scheduling import resolve_slot, slot_parts_from_dict
+from ..config import LOGGER_NAME
+from ..models import Intent, resolve_slot, slot_parts_from_dict
 from .base import LLMClient, LLMError
 from .prompts import (
     INTERPRET_MESSAGE_SYSTEM,

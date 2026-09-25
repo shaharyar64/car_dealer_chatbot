@@ -9,7 +9,8 @@ Before any car is identified, a title is derived from the first meaningful user 
 import re
 from typing import Optional
 
-from ..chatbot import OPTIONS_CARS, Chatbot
+from ..core import Chatbot
+from ..core.chatbot import OPTIONS_CARS
 
 DEFAULT_TITLE = "New conversation"
 MAX_TITLE_WORDS = 5

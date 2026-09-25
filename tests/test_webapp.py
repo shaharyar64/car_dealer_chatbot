@@ -14,7 +14,7 @@ from car_dealer_chatbot.services.factory import AppServices
 
 from .conftest import FakeLLMClient
 
-APP_FILE = str(Path(__file__).parent.parent / "src" / "car_dealer_chatbot" / "webapp.py")
+APP_FILE = str(Path(__file__).parent.parent / "src" / "car_dealer_chatbot" / "ui" / "webapp.py")
 
 
 @pytest.fixture(autouse=True)

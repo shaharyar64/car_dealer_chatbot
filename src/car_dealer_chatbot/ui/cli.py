@@ -2,11 +2,10 @@
 
 import sys
 
-from .chatbot import Chatbot
-from .config import load_env
-from .logging_config import setup_logging
-from .repository import DataError
-from .services.factory import build_llm_client, load_inventory
+from ..core import Chatbot
+from ..config import load_env, setup_logging
+from ..data import DataError
+from ..services.factory import build_llm_client, load_inventory
 
 
 def build_chatbot() -> Chatbot:

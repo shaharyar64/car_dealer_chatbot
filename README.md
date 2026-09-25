@@ -47,19 +47,32 @@ a CLI.
 car_dealer_chatbot/
 ├── data/                    # cars.csv, dealers.csv — sample inventory
 ├── src/car_dealer_chatbot/
-│   ├── chatbot.py           # conversation logic: context, references, replies
-│   ├── intents.py           # the Intent a message is interpreted as
-│   ├── repository.py        # CSV loading and fuzzy car search
-│   ├── scheduling.py        # turns an extracted date/time into a real datetime
+│   ├── core/                # core conversation logic
+│   │   └── chatbot.py       # conversation logic: context, references, replies
+│   ├── config/              # configuration and logging
+│   │   ├── config.py        # environment variable handling
+│   │   └── logging_config.py # logging setup
+│   ├── models/              # data models and intents
+│   │   ├── models.py        # Car and Dealer dataclasses
+│   │   ├── intents.py       # the Intent a message is interpreted as
+│   │   └── scheduling.py    # turns an extracted date/time into a real datetime
+│   ├── data/                # data access layer
+│   │   └── repository.py    # CSV loading and fuzzy car search
 │   ├── llm/                 # LangChain/OpenAI client, prompts, tool schemas
 │   ├── services/            # runs a chat turn, auto titles, service wiring
 │   ├── storage/             # in-memory conversation/message store (per chat session)
-│   ├── ui/                  # Streamlit screens (sidebar, chat page, session, theme)
-│   ├── cli.py, webapp.py    # CLI and web app entry points
-│   └── config.py            # environment variable handling
+│   └── ui/                  # Streamlit screens and CLI entry points
+│       ├── cli.py           # CLI entry point
+│       ├── webapp.py        # Streamlit web app entry point
+│       ├── chat_page.py     # main chat area
+│       ├── sidebar.py       # chat history sidebar
+│       ├── session.py       # Streamlit session management
+│       ├── formatting.py    # message formatting
+│       ├── theme.py         # UI theming
+│       └── __init__.py
 ├── scripts/setup.py         # one-command setup (venv, dependencies)
 ├── tests/                   # pytest suite
-└── docs/                    # architecture diagram and project plan
+└── docs/                    # architecture diagram, project plan, L1_spec, traces and tdd 
 ```
 
 ## Setup
@@ -137,28 +150,40 @@ dealer can't be found. The shipped data has 78 cars, 22 dealers and 26 makes, wi
 
 ## Running the Project
 
+**Web App (Streamlit):**
 ```bash
 # Windows
-.venv\Scripts\python.exe -m streamlit run src/car_dealer_chatbot/webapp.py
+streamlit run src/car_dealer_chatbot/ui/webapp.py
 # macOS / Linux
-.venv/bin/python -m streamlit run src/car_dealer_chatbot/webapp.py
+streamlit run src/car_dealer_chatbot/ui/webapp.py
 ```
 
 Opens at `http://localhost:8501`. Stop with **Ctrl+C**; restart after changing code (Streamlit
 doesn't reload the package automatically).
 
-A CLI is also available (`.venv\Scripts\car-dealer-chatbot.exe` on Windows,
-`.venv/bin/car-dealer-chatbot` on macOS/Linux). It only needs `OPENAI_API_KEY` — nothing is
-saved, and it exits on `exit`/`quit`/Ctrl+C.
+**CLI:**
+```bash
+# Windows
+python -m car_dealer_chatbot.ui.cli
+# macOS / Linux
+python -m car_dealer_chatbot.ui.cli
+```
+
+The CLI only needs `OPENAI_API_KEY` — nothing is saved, and it exits on `exit`/`quit`/Ctrl+C.
 
 ## Testing
 
 ```bash
-pytest                                        # all tests
-pytest --cov=src/car_dealer_chatbot tests/    # with coverage
+pytest                      # run all tests
+pytest --cov=src tests/     # run with coverage report
 ```
 
-All tests use a fake LLM client, so no OpenAI calls or API credits are used.
+All tests use a fake LLM client, so no OpenAI calls or API credits are used. Tests verify:
+- Intent interpretation from user messages
+- Car search and filtering logic
+- Scheduling and datetime resolution
+- Chatbot conversation flow and context awareness
+- UI components and Streamlit integration
 
 ## Edge Cases
 

@@ -3,12 +3,11 @@
 import logging
 from dataclasses import dataclass
 
-from ..config import Config
+from ..config import Config, LOGGER_NAME
+from ..data import DataError, load_cars, load_dealers
 from ..llm import LLMClient
 from ..llm.openai_client import OpenAIClient
-from ..logging_config import LOGGER_NAME
 from ..models import Car, Dealer
-from ..repository import DataError, load_cars, load_dealers
 from .chat_service import ChatService
 
 logger = logging.getLogger(LOGGER_NAME)

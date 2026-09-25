@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 from datetime import datetime
 from typing import Optional
 
-from ..intents import Intent
+from ..models import Intent
 
 
 class LLMError(Exception):

@@ -2,7 +2,8 @@
 
 import pytest
 
-from car_dealer_chatbot.chatbot import OPTIONS_CARS, Chatbot
+from car_dealer_chatbot.core import Chatbot
+from car_dealer_chatbot.core.chatbot import OPTIONS_CARS
 from car_dealer_chatbot.models import Car, Dealer
 
 from .conftest import FakeLLMClient

@@ -2,15 +2,14 @@
 
 import pytest
 
-from car_dealer_chatbot.chatbot import (
+from car_dealer_chatbot.core import Chatbot
+from car_dealer_chatbot.core.chatbot import (
     LLM_UNAVAILABLE_MESSAGE,
     MAX_HISTORY_MESSAGES,
     OPTIONS_ACTIONS,
     OPTIONS_CARS,
-    Chatbot,
 )
-from car_dealer_chatbot.intents import Intent
-from car_dealer_chatbot.models import Car, Dealer
+from car_dealer_chatbot.models import Car, Dealer, Intent
 
 from .conftest import FailingLLMClient, FakeLLMClient
 
@@ -516,19 +515,19 @@ def test_their_refers_to_the_dealer_being_discussed(chatbot: Chatbot) -> None:
 
 
 def test_what_is_my_name_after_stating_it(chatbot: Chatbot) -> None:
-    chatbot.process_input("My name is Ayesha.")
+    chatbot.process_input("My name is Shaharyar.")
     reply, done = chatbot.process_input("What is my name?")
     assert done is False
-    assert reply == "Your name is Ayesha."
+    assert reply == "Your name is Shaharyar."
 
 
 def test_mixed_request_and_personal_fact_are_both_handled(chatbot: Chatbot) -> None:
     """A name stated alongside a request must not derail the request (or vice versa)."""
-    reply, done = chatbot.process_input("Show me BMW 3 Series and my name is Ayesha.")
+    reply, done = chatbot.process_input("Show me BMW 3 Series and my name is Shaharyar.")
     assert done is False
     assert "not sure what you mean" not in reply
     assert "BMW 3 Series 320i" in reply
-    assert chatbot.facts.get("name") == "Ayesha"
+    assert chatbot.facts.get("name") == "Shaharyar"
 
 
 def test_price_filter_after_search_narrows_the_open_search(chatbot: Chatbot) -> None:
@@ -556,10 +555,10 @@ def test_reported_bug_options_request_with_a_name_in_the_same_message(chatbot: C
     options') with an unrelated personal statement must not fall back to the generic apology, and
     the name must still be usable afterwards.
     """
-    reply, done = chatbot.process_input("tell me the options my name is ayesha")
+    reply, done = chatbot.process_input("tell me the options my name is shaharyar")
     assert done is False
     assert "not sure what you mean" not in reply
-    assert chatbot.facts.get("name") == "Ayesha"
+    assert chatbot.facts.get("name") == "Shaharyar"
 
     reply, done = chatbot.process_input("tell me the options")
     assert done is False
@@ -567,4 +566,4 @@ def test_reported_bug_options_request_with_a_name_in_the_same_message(chatbot: C
 
     reply, done = chatbot.process_input("what is my name")
     assert done is False
-    assert reply == "Your name is Ayesha."
+    assert reply == "Your name is Shaharyar."
